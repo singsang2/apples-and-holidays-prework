@@ -78,8 +78,7 @@ def all_holidays_with_bbq(holiday_hash)
   array
 end
 
-
-  let(:holiday_supplies) {
+holiday_supplies=
     {
       :winter => {
         :christmas => ["Lights", "Wreath"],
@@ -98,6 +97,6 @@ end
   }
 
 
-
+all_supplies_in_holidays(holiday_supplies)
 
 
