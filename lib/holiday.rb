@@ -39,7 +39,7 @@ end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
-  holiday_name[season][holiday_name] = supply_array
+  holiday_hash[season][holiday_name] = supply_array
   # remember to return the updated hash
   holiday_hash
 end
@@ -71,7 +71,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   array = []
   holiday_hash.each do |season, holiday|
-    array << holiday if holiday.include?("BBQ")
+    holiday.each {|day, supply| array << day.to_s if supply.include("BBQ")}
   end
   
   array
